@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:personality_test/question/question_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({
@@ -39,7 +40,17 @@ class _MainPage extends State<MainPage> {
                             Text(list['questions'][value]['title'].toString()),
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () async {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return QuestionPage(
+                                question: list['questions'][value]['file']
+                                    .toString());
+                          },
+                        ),
+                      );
+                    },
                   );
                 },
                 itemCount: list['count'],
