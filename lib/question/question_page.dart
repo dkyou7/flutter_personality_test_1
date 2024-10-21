@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:personality_test/detail/detail_page.dart';
 
 class QuestionPage extends StatefulWidget {
   final String question;
@@ -91,7 +92,15 @@ class _QuestionPageState extends State<QuestionPage> {
                   selectNumber == -1
                       ? Container()
                       : ElevatedButton(
-                          onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushReplacement(MaterialPageRoute(builder: (context) {
+                        return DetailPage(
+                          question: questions['question'],
+                          answer: questions['answer'][selectNumber],
+                        );
+                      }));
+                    },
                           child: const Text('결과 보기'),
                         ),
                 ],
