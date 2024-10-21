@@ -48,6 +48,7 @@ class DefaultFirebaseOptions {
     appId: '1:913412953470:web:c6e285844f9b4b029d4f2f',
     messagingSenderId: '913412953470',
     projectId: 'persionality-test',
+    databaseURL: 'https://persionality-test-default-rtdb.firebaseio.com',
     authDomain: 'persionality-test.firebaseapp.com',
     storageBucket: 'persionality-test.appspot.com',
   );
