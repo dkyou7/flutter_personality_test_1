@@ -60,6 +60,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - res/api/list.json
     - res/api/mbti.json
     - res/api/test1.json
     - res/api/test2.json
